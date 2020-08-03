@@ -4,3 +4,23 @@ body {
     color: $text_color_primary;
     line-height: 1.7;
 }
+
+.header__primary {
+    font-weight:100;
+    text-transform:uppercase;
+    background-color:white;
+    & span {
+        display:block;
+        text-align:center;
+    }
+
+    &--main {
+        font-size: 4rem;
+        letter-spacing: 1rem;
+    }
+
+    &--sub {
+        font-size: 1.4rem;
+        letter-spacing: .5rem;
+    }
+}
