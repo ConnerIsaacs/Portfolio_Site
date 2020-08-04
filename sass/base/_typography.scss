@@ -9,18 +9,18 @@ body {
     font-weight:100;
     text-transform:uppercase;
     background-color:white;
-    & span {
-        display:block;
-        text-align:center;
-    }
 
     &--main {
         font-size: 4rem;
         letter-spacing: 1rem;
+        display:block;
+        text-align:center;
     }
 
     &--sub {
         font-size: 1.4rem;
         letter-spacing: .5rem;
+        display:block;
+        text-align:center;
     }
 }

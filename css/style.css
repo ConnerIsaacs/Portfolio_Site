@@ -34,15 +34,16 @@ body {
   font-weight: 100;
   text-transform: uppercase;
   background-color: white; }
-  .header__primary span {
-    display: block;
-    text-align: center; }
   .header__primary--main {
     font-size: 4rem;
-    letter-spacing: 1rem; }
+    letter-spacing: 1rem;
+    display: block;
+    text-align: center; }
   .header__primary--sub {
     font-size: 1.4rem;
-    letter-spacing: .5rem; }
+    letter-spacing: .5rem;
+    display: block;
+    text-align: center; }
 
 /*COMPONENTS*/
 .navigation {
