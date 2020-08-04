@@ -1,10 +1,35 @@
 .navigation {
     list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:1.5rem;
     &__item {
         display:inline;
-
+        position:relative;
         &:not(:last-child){
-            margin-right:1rem;
+            margin-right:10rem;
+        }
+
+        &:after {
+            z-index:-1;
+            content:"";
+            position:absolute;
+            transition:.5s all;
+            left:50%;
+            bottom:-.5rem;
+            transform:translateX(-50%);
+            width:0;
+            height:.2rem;
+            background-color:#333;
+        }
+
+        &:hover {
+            transform:translateY(-.2rem);
+            cursor:pointer;
+            &:after {
+                width:100%;
+            }
         }
     }
 }
+
