@@ -3,32 +3,29 @@
     text-transform: uppercase;
     text-decoration:none;
     position:relative;
-&:hover {
-    cursor:pointer;
-}
-    &-pink {
-        color: $text_color_secondary;
-        border: .1rem solid $text_color_secondary;
-        position:relative;
-        transition: .5s color;
-        overflow:hidden;
-        &:hover {
-            color:white;
-            &::before {
-                width:102%;
-            }
-        }
+    &:hover {
+        cursor:pointer;
+    }
+
+    &-white {
+        border:1px solid white;
+        color:white;
         &::before {
-            content:"";
-            z-index:1;
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%, -50%);
+            content:'';
+            background-color:white;
             width:0%;
-            transition:.5s width;
-            height:102%;
-            background-color:$text_color_secondary;
+            height:100%;
+            position:absolute;
+            transition: .3s width;
+            top:0;
+            left:0;
+            z-index:1;
+        }
+        &:hover {
+            color: $text_color_secondary;
+            &::before {
+                width:100%;
+            }
         }
     }
 }

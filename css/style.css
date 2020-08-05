@@ -57,14 +57,20 @@ body {
     text-align: center; }
 
 .projectGrid__header {
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-top: 10px; }
 
 .projectGrid__text {
-  color: #FA7268;
+  color: #777;
   font-size: 1.5rem; }
 
 .projectGrid__link {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  z-index: 2; }
 
 /*COMPONENTS*/
 .btn {
@@ -74,27 +80,23 @@ body {
   position: relative; }
   .btn:hover {
     cursor: pointer; }
-  .btn-pink {
-    color: #FA7268;
-    border: 0.1rem solid #FA7268;
-    position: relative;
-    transition: .5s color;
-    overflow: hidden; }
-    .btn-pink:hover {
-      color: white; }
-      .btn-pink:hover::before {
-        width: 102%; }
-    .btn-pink::before {
-      content: "";
-      z-index: 1;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+  .btn-white {
+    border: 1px solid white;
+    color: white; }
+    .btn-white::before {
+      content: '';
+      background-color: white;
       width: 0%;
-      transition: .5s width;
-      height: 102%;
-      background-color: #FA7268; }
+      height: 100%;
+      position: absolute;
+      transition: .3s width;
+      top: 0;
+      left: 0;
+      z-index: 1; }
+    .btn-white:hover {
+      color: #FA7268; }
+      .btn-white:hover::before {
+        width: 100%; }
 
 .navigation {
   list-style: none;
@@ -127,31 +129,38 @@ body {
   width: 90rem;
   margin: 5rem auto; }
   .projectGrid__item {
+    float: left;
     width: 30rem;
     height: 30rem;
-    background-color: red; }
-    .projectGrid__item:hover .projectGrid__info {
-      opacity: 1; }
-      .projectGrid__item:hover .projectGrid__info .projectGrid__bottom {
-        margin-top: 5rem; }
+    background-image: url("../img/test.jpg");
+    transition: background-image .5s;
+    background-size: cover;
+    position: relative; }
+    .projectGrid__item:hover {
+      background-image: linear-gradient(rgba(250, 114, 104, 0.7), rgba(250, 114, 104, 0.7)), url("../img/test.jpg"); }
+      .projectGrid__item:hover .projectGrid__bottom {
+        height: 10rem; }
+      .projectGrid__item:hover .projectGrid__top {
+        opacity: 1; }
   .projectGrid__top {
-    text-align: center; }
-  .projectGrid__bottom {
-    margin-top: 20rem;
-    transition: .5s all; }
-  .projectGrid__info {
-    opacity: 0;
-    background-color: white;
-    transition: .5s all;
-    width: 100%;
-    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center; }
-  .projectGrid__link {
-    position: relative;
-    z-index: 2; }
+    align-items: center;
+    opacity: 0;
+    width: 30rem;
+    height: 20rem;
+    position: absolute;
+    top: 0; }
+  .projectGrid__bottom {
+    transition: .2s all;
+    background-color: white;
+    height: 0%;
+    width: 30rem;
+    position: absolute;
+    bottom: 0;
+    transition: height 1s;
+    overflow: hidden;
+    padding: 0 1rem; }
 
 /*LAYOUT*/
 .row {

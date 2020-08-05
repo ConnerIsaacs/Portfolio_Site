@@ -29,13 +29,19 @@ body {
 
 .projectGrid__header {
     font-size:2.5rem;
+    line-height:1;
+    margin-top:10px;
 }
 
 .projectGrid__text {
-    color: $text_color_secondary;
+    color: #777;
     font-size:1.5rem;
 }
 
 .projectGrid__link {
     font-size: 1.5rem;
+    text-decoration: none;
+    color:inherit;
+    position:relative;
+    z-index:2;
 }

@@ -2,37 +2,46 @@
     width: $projectGrid_width;
     margin:5rem auto;
     &__item {
+        float:left;
         width: $projectSquare_width;
         height: $projectSquare_width;
-        background-color:red;
-        &:hover .projectGrid__info {
-            opacity:1;
+        background-image: url("../img/test.jpg");
+        transition: background-image .5s;
+        background-size:cover;
+        position:relative;
+        &:hover {
+            background-image:linear-gradient(
+                rgba($text_color_secondary, .7),
+                rgba($text_color_secondary, .7)), 
+                url("../img/test.jpg");
+            & .projectGrid__bottom{
+                height:10rem;
+            }
 
-            & .projectGrid__bottom {
-                margin-top:5rem;
+            & .projectGrid__top {
+                opacity:1;
             }
         }
     }
     &__top {
-        text-align: center;
-    }
-    &__bottom {
-        margin-top:20rem;
-        transition: .5s all;
-    }
-    &__info {
-        opacity:0;
-        background-color:white;
-        transition: .5s all;
-        width:100%;
-        height:100%;
         display:flex;
-        flex-direction:column;
         justify-content:center;
         align-items:center;
+        opacity:0;
+        width:30rem;
+        height:20rem;
+        position:absolute;
+        top:0;
     }
-    &__link {
-        position:relative;
-        z-index:2;
+    &__bottom {
+        transition: .2s all;
+        background-color:white;
+        height:0%;
+        width:30rem;
+        position:absolute;
+        bottom:0;
+        transition:height 1s;
+        overflow:hidden;
+        padding: 0 1rem;
     }
 }
