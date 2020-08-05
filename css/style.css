@@ -128,6 +128,15 @@ body {
 .projectGrid {
   width: 90rem;
   margin: 5rem auto; }
+  .projectGrid__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FA7268;
+    opacity: 0;
+    transition: .5s opacity; }
   .projectGrid__item {
     float: left;
     width: 30rem;
@@ -135,13 +144,14 @@ body {
     background-image: url("../img/test.jpg");
     transition: background-image .5s;
     background-size: cover;
-    position: relative; }
-    .projectGrid__item:hover {
-      background-image: linear-gradient(rgba(250, 114, 104, 0.7), rgba(250, 114, 104, 0.7)), url("../img/test.jpg"); }
-      .projectGrid__item:hover .projectGrid__bottom {
-        height: 10rem; }
-      .projectGrid__item:hover .projectGrid__top {
-        opacity: 1; }
+    position: relative;
+    overflow: hidden; }
+    .projectGrid__item:hover .projectGrid__bottom {
+      height: 10rem; }
+    .projectGrid__item:hover .projectGrid__overlay {
+      opacity: .8; }
+    .projectGrid__item:hover .projectGrid__top {
+      opacity: 1; }
   .projectGrid__top {
     display: flex;
     justify-content: center;
@@ -152,13 +162,12 @@ body {
     position: absolute;
     top: 0; }
   .projectGrid__bottom {
-    transition: .2s all;
     background-color: white;
     height: 0%;
     width: 30rem;
     position: absolute;
     bottom: 0;
-    transition: height 1s;
+    transition: height .2s;
     overflow: hidden;
     padding: 0 1rem; }
 
