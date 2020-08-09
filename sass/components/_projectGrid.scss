@@ -1,5 +1,6 @@
 .projectGrid {
     width: $projectGrid_width;
+    height: $projectGrid_width;
     margin:5rem auto;
     &__overlay {
         position:absolute;

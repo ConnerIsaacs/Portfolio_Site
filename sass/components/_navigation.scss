@@ -4,6 +4,7 @@
     text-transform: uppercase;
     font-size:1.5rem;
     position:relative;
+    z-index:1;
     &__item {
         display:inline;
         position:absolute;

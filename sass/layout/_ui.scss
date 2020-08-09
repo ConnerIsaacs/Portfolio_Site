@@ -1,0 +1,39 @@
+.content {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 0;
+    height:120rem;
+    &__item {
+        width:80vw;
+        position: absolute;
+        height:120rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: block;
+        transition: background .66s;
+    }
+}
+
+.currentMain {
+    transform:translateX(0vw);
+    background:white;
+}
+.prevMain {
+    transform:translateX(-80vw);
+    background: #f1edec;
+}
+.nextMain {
+    transform:translateX(80vw);
+    background:#f1edec;
+}
+
+.header {
+    position:absolute;
+    z-index:1;
+    top: 5rem;
+    left:50%;
+    transform:translateX(-50%);
+}
