@@ -27,3 +27,79 @@
         transform:scale(1);
     }
 }
+
+
+//NAVIGATION AND CONTENT ANIMATIONS
+@keyframes nav_prevToActive {
+    0% {
+        transform:translateX(calc(-50% - 20rem));
+    }
+    100% {
+        transform:translateX(calc(-50%));
+    }
+}
+
+@keyframes nav_nextToActive {
+    0% {
+        transform:translateX(calc(-50% + 20rem));
+    }
+    100% {
+        transform:translateX(calc(-50%));
+    }
+}
+
+@keyframes nav_nextToPrev {
+	0% {
+		opacity:1;
+		transform:translateX(calc(-50% + 20rem));
+	}
+	50% {
+		opacity: 0; 
+		transform:translateX(calc(-50% + 25rem));
+	}
+	50.001% {
+		opacity:0;
+		transform:translateX(calc(-50% - 25rem));
+	}
+	100% {
+		opacity: 1; 
+		transform:translateX(calc(-50% - 20rem));
+	}
+}
+
+@keyframes nav_prevToNext {
+	0% {
+		opacity:1;
+		transform:translateX(calc(-50% - 20rem));
+	}
+	50% {
+		opacity: 0; 
+		transform:translateX(calc(-50% - 25rem));
+	}
+	50.001% {
+		opacity:0;
+		transform:translateX(calc(-50% + 25rem));
+	}
+	100% {
+		opacity: 1; 
+		transform:translateX(calc(-50% + 20rem));
+	}
+}
+
+@keyframes nav_activeToNext {
+    0% {
+        transform:translateX(-50%);
+    }
+    100% {
+        transform:translateX(calc(-50% + 20rem));
+    }
+}
+
+@keyframes nav_activeToPrev {
+    0% {
+        transform:translateX(-50%);
+    }
+    100% {
+        transform:translateX(calc(-50% - 20rem));
+    }
+}

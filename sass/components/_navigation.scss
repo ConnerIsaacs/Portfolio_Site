@@ -3,9 +3,12 @@
     text-align: center;
     text-transform: uppercase;
     font-size:1.5rem;
+    position:relative;
     &__item {
         display:inline;
-        position:relative;
+        position:absolute;
+        left:50%;
+        transform:translateX(-50%);
         &:not(:last-child){
             margin-right:10rem;
         }
@@ -24,12 +27,19 @@
         }
 
         &:hover {
-            transform:translateY(-.2rem);
             cursor:pointer;
             &:after {
                 width:100%;
             }
         }
+    }
+
+    &__prev {
+        transform:translateX(calc(-50% - 20rem));
+    }
+
+    &__next {
+        transform:translateX(calc(-50% + 20rem));
     }
 }
 
