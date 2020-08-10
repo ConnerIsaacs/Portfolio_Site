@@ -176,23 +176,46 @@ body {
   position: relative;
   z-index: 2; }
 
+.section__header {
+  font-size: 2.5rem; }
+
 .header_padding {
-  margin-top: 20rem; }
+  margin-top: 28rem; }
+
+.margin__top--sm {
+  margin-top: 3rem; }
+
+.margin__top--md {
+  margin-top: 5rem; }
+
+.text_center {
+  text-align: center; }
 
 /*COMPONENTS*/
+.about__container {
+  padding: 0 10rem;
+  font-size: 1.5rem; }
+
+.about__skills--1, .about__skills--2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+
 .btn {
   padding: .5rem 1.5rem .5rem 1.5rem;
   text-transform: uppercase;
   text-decoration: none;
-  position: relative; }
+  position: relative;
+  font-size: 1.5rem; }
   .btn:hover {
     cursor: pointer; }
   .btn-white {
-    border: 1px solid white;
-    color: white; }
+    border: 1px solid #fff;
+    color: #fff; }
     .btn-white::before {
       content: '';
-      background-color: white;
+      background-color: #fff;
       width: 0%;
       height: 100%;
       position: absolute;
@@ -204,6 +227,15 @@ body {
       color: #FA7268; }
       .btn-white:hover::before {
         width: 100%; }
+  .btn-blue {
+    border: 1px solid #5A7D7C;
+    color: #5A7D7C;
+    transition: .2s all;
+    display: inline-block; }
+    .btn-blue:hover {
+      transform: scale(1.1); }
+    .btn-blue:active {
+      transform: scale(1.05); }
 
 .navigation {
   list-style: none;
@@ -242,7 +274,7 @@ body {
 .projectGrid {
   width: 90rem;
   height: 90rem;
-  margin: 5rem auto; }
+  margin: 0 auto; }
   .projectGrid__overlay {
     position: absolute;
     top: 0;

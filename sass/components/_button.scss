@@ -3,16 +3,17 @@
     text-transform: uppercase;
     text-decoration:none;
     position:relative;
+    font-size: 1.5rem;
     &:hover {
         cursor:pointer;
     }
 
     &-white {
-        border:1px solid white;
-        color:white;
+        border:1px solid $color-white;
+        color:$color-white;
         &::before {
             content:'';
-            background-color:white;
+            background-color:$color-white;
             width:0%;
             height:100%;
             position:absolute;
@@ -22,10 +23,24 @@
             z-index:1;
         }
         &:hover {
-            color: $text_color_secondary;
+            color: $accent-primary;
             &::before {
                 width:100%;
             }
+        }
+    }
+
+    &-blue {
+        border:1px solid $accent-secondary;
+        color:$accent-secondary;
+        transition: .2s all;
+        display:inline-block;
+        &:hover {
+            transform:scale(1.1);
+        }
+
+        &:active {
+            transform:scale(1.05);
         }
     }
 }

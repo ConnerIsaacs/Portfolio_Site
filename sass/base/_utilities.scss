@@ -1,3 +1,16 @@
 .header_padding {
-    margin-top:20rem;
+    margin-top:28rem;
+}
+
+.margin__top {
+    &--sm {
+        margin-top: 3rem;
+    }
+    &--md {
+        margin-top: 5rem;
+    }
+}
+
+.text_center {
+    text-align:center;
 }

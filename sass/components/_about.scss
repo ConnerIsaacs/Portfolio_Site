@@ -1,0 +1,16 @@
+.about {
+    &__container {
+        padding: 0 10rem;
+        font-size:1.5rem;
+    }
+
+    &__skills {
+
+        &--1, &--2 {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+        }
+    }
+}

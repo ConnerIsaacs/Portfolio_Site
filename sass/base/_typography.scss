@@ -1,7 +1,7 @@
 body {
     font-family: "Muli", sans-serif;
     font-weight: 400;
-    color: $text_color_primary;
+    color: $color-black;
     line-height: 1.7;
 }
 .header__letterMain {
@@ -44,4 +44,8 @@ body {
     color:inherit;
     position:relative;
     z-index:2;
+}
+
+.section__header {
+    font-size:2.5rem;
 }
